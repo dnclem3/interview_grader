@@ -1,4 +1,5 @@
-// React implementation of the interview feedback helper
+// React implementation of the Interview Feedback Helper
+// Merge markers have been removed and the question bank is a simple object keyed by category
 
 // The question bank is organized by category so sessions can be filtered easily
 const questionBank = {
