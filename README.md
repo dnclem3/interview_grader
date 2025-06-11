@@ -6,7 +6,7 @@ The question bank lives in `docs/script.js` and is defined as an object keyed by
 
 ## Usage
 
-Install dependencies with `npm install` and open `docs/index.html` in a browser. React is loaded from a CDN so no build step is required. You can also run `npm start` to serve the `docs` folder locally and `npm run deploy` to publish it to GitHub Pages. After installing dependencies, run `npm test` to execute the Jest test suite.
+Install dependencies with `npm install` and open `docs/index.html` in a browser. React is loaded from a CDN so no build step is required. You can also run `npm start` to serve the `docs` folder locally and `npm run deploy` to publish it to GitHub Pages. After installing dependencies (which installs Jest locally), run `npm test` to execute the Jest test suite.
 
 1. Select a category and number of questions.
 2. The rubric adapts to the question type (e.g., STAR for behavioral questions).

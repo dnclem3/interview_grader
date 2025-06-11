@@ -18,6 +18,6 @@
   "scripts": {
     "start": "serve docs",
     "deploy": "gh-pages -d docs",
-    "test": "jest"
+    "test": "npx jest"
   }
 }
