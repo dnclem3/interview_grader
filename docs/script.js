@@ -190,6 +190,7 @@ function App() {
 }
 
 ReactDOM.render(<App />, document.getElementById('root'));
+
 const questionBank = [
     { category: 'Behavioral', text: 'Tell me about a time you led a team through a challenge.' },
     { category: 'Behavioral', text: 'Describe a conflict you handled at work.' },
