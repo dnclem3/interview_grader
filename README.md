@@ -5,6 +5,8 @@ A lightweight tool to run quick mock interview sessions. It provides a small que
 ## Usage
 
 Open `docs/index.html` in a browser. No build step is required.
+=======
+Open `web/index.html` in a browser. No build step is required.
 
 1. Select a category and number of questions.
 2. The rubric adapts to the question type (e.g., STAR for behavioral questions).
