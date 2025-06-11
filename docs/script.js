@@ -1,13 +1,22 @@
 // React implementation of the interview feedback helper
 
-const questionBank = [
-  { category: 'Behavioral', text: 'Tell me about a time you led a team through a challenge.' },
-  { category: 'Behavioral', text: 'Describe a conflict you handled at work.' },
-  { category: 'Estimation', text: 'How many umbrellas are sold each year in the US?' },
-  { category: 'Strategy', text: 'What should our company prioritize in the next year?' },
-  { category: 'Technical', text: 'Explain the concept of dependency injection.' },
-  { category: 'Technical', text: 'What are the benefits of using a relational database?' },
-];
+// The question bank is organized by category so sessions can be filtered easily
+const questionBank = {
+  Behavioral: [
+    'Tell me about a time you led a team through a challenge.',
+    'Describe a conflict you handled at work.',
+  ],
+  Estimation: [
+    'How many umbrellas are sold each year in the US?',
+  ],
+  Strategy: [
+    'What should our company prioritize in the next year?',
+  ],
+  Technical: [
+    'Explain the concept of dependency injection.',
+    'What are the benefits of using a relational database?',
+  ],
+};
 
 const rubricMap = {
   Default: ['Clarity', 'Structure', 'Insight', 'Relevance'],
@@ -138,8 +147,15 @@ function App() {
   const [evaluations, setEvaluations] = React.useState([]);
 
   const startSession = () => {
-    const filtered = category === 'Any' ? questionBank : questionBank.filter((q) => q.category === category);
-    setSessionQuestions(shuffle([...filtered]).slice(0, numQuestions));
+    const build = [];
+    if (category === 'Any') {
+      Object.keys(questionBank).forEach((cat) => {
+        questionBank[cat].forEach((text) => build.push({ category: cat, text }));
+      });
+    } else {
+      questionBank[category].forEach((text) => build.push({ category, text }));
+    }
+    setSessionQuestions(shuffle(build).slice(0, numQuestions));
     setEvaluations([]);
     setCurrentIndex(0);
     setStage('question');
