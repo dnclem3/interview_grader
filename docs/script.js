@@ -206,7 +206,12 @@ function App() {
   return <div id="app">{content}</div>;
 }
 
-ReactDOM.render(<App />, document.getElementById('root'));
+if (typeof document !== 'undefined') {
+  const rootEl = document.getElementById('root');
+  if (rootEl) {
+    ReactDOM.render(<App />, rootEl);
+  }
+}
 
 // Expose for testing
 if (typeof module !== "undefined") {
