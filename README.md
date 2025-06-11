@@ -4,7 +4,7 @@ A lightweight tool to run quick mock interview sessions. It provides a small que
 
 ## Usage
 
-Open `docs/index.html` in a browser. No build step is required.
+Open `docs/index.html` in a browser. React is loaded from a CDN so no build step is required.
 =======
 Open `web/index.html` in a browser. No build step is required.
 
