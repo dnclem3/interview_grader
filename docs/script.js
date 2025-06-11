@@ -207,3 +207,9 @@ function App() {
 }
 
 ReactDOM.render(<App />, document.getElementById('root'));
+
+// Expose for testing
+if (typeof module !== "undefined") {
+  module.exports = { App, questionBank, rubricMap, shuffle };
+}
+
