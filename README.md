@@ -1,6 +1,7 @@
 # Interview Feedback Helper
 
 A lightweight tool to run quick mock interview sessions. It provides a small question bank, a simple evaluation rubric, and a session summary that can be copied for sharing.
+The question bank in `docs/script.js` uses an object keyed by category so each session can filter questions easily.
 
 ## Usage
 
