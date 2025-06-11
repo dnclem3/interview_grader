@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interview Feedback Helper</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <div id="setup" class="screen">
+            <h1>Interview Session Setup</h1>
+            <label>Category:
+                <select id="category">
+                    <option value="Any">Any</option>
+                    <option value="Behavioral">Behavioral</option>
+                    <option value="Estimation">Estimation</option>
+                    <option value="Strategy">Strategy</option>
+                    <option value="Technical">Technical</option>
+                </select>
+            </label>
+            <label>Number of Questions:
+                <select id="numQuestions">
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </label>
+            <button id="startBtn">Start Session</button>
+        </div>
+
+        <div id="question" class="screen" style="display:none;">
+            <h2 id="qText"></h2>
+            <form id="rubricForm"></form>
+            <div id="progress"></div>
+        </div>
+
+        <div id="summary" class="screen" style="display:none;">
+            <h1>Session Summary</h1>
+            <div id="results"></div>
+            <button id="copyBtn">Copy Summary</button>
+            <button id="restartBtn">New Session</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
